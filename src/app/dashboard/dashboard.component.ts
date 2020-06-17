@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { NewsService } from '../shared/news.service';
 import { NewsModel } from '../shared/news.model';
 import { Form } from '@angular/forms';
