@@ -14,7 +14,9 @@ export class HeaderComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    
   }
+
   onSubmit(form : NgForm)
   {
     console.log(form);
