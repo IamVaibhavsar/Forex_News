@@ -1,1 +1,35 @@
-<p>header works!</p>
+
+<nav class="navbar navbar-light bg-success navbar-expand-lg">
+    <a class="navbar-brand mt-1" href="#">
+        <i class="fa fa-newspaper-o fa-2x text-dark  d-inline-block align-top">
+    </i> Ng News</a>
+    <button class="navbar-toggler" data-toggle="collapse" data-target="#navbaritem" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+</button>
+
+    <div class="collapse navbar-collapse" id="navbaritem">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0 lead">
+            <li class="nav-item active ">
+                <a class="nav-link" href="#" (click)="filterClicked($event)">World</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" (click)="filterClicked($event)">India</a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link" href="#" (click)="filterClicked($event)">Tech</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" (click)="filterClicked($event)">Sports</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" (click)="filterClicked($event)">Business</a>
+            </li>
+
+        </ul>
+
+        <form class="form-group d-flex ml-auto mb-0" #form="ngForm" (submit)="onSubmit(form)">
+            <input type="text" class="form-control mr-2 align-self-center" required placeholder="Search" name="searchText" [ngModel]="searchText" value="">
+            <button class="btn btn-outline-warning align-self-center" [disabled]="!form.valid" type="submit">Search</button>
+        </form>
+    </div>
+</nav>

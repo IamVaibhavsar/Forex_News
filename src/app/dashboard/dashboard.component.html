@@ -1,1 +1,29 @@
-<p>dashboard works!</p>
+<div class="container-fluid py-5 bg-light">
+    <div class="row">
+        <div class="col-md-4 col-lg-3 my-3 d-flex align-items-stretch" *ngFor="let item of newsService.newsArticles | paginate: { itemsPerPage: 8, currentPage: p }">
+            <div class="card">
+                <img [src]="item.thumbnail" alt="" class="card-img-top img-fluid img-thumbnail">
+                <div class="card-body">
+                    <div class="card-title text-capitalize">
+                        <h5>{{item.webTitle}}</h5>
+                    </div>
+                    <p class="card-text">
+                        {{ (item.trailText | slice:0:100 ) +'..' }}
+                    </p>
+                    <div class="d-flex justify-content-left mt-3">
+                        <p class="badge badge-secondary mr-3">{{item.webPublicationDate | date}}</p>
+                        <p class="badge badge-secondary ">{{item.sectionId}}</p>
+                    </div>
+
+                </div>
+                <div class="card-footer bg-warning d-flex justify-content-end">
+
+                    <a [href]="item.webUrl" class="btn btn-success" target="_blank">
+                        <i class="fa fa-book mr-1"></i>Read More
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <pagination-controls class="text-center" (pageChange)="p = $event"></pagination-controls>
+</div>
