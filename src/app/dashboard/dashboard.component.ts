@@ -10,10 +10,10 @@ import { element } from 'protractor';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
-
+  p: any;
   articles : any;
   temp : NewsModel = new NewsModel;
-  constructor(private newsService : NewsService) { }
+  constructor(public newsService : NewsService) { }
 
   ngOnInit() {
       this.FetchHeadlines();

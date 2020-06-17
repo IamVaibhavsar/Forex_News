@@ -19,7 +19,7 @@ gaurSectionUrl = "https://content.guardianapis.com/search?show-fields=all&page-s
 
 
 
-  constructor(private http:HttpClient) { }
+  constructor(public http:HttpClient) { }
 
   GetAllGaurdian()
   {

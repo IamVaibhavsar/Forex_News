@@ -7,6 +7,7 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+  searchText: string;
   filterText : string;
 @Output() search = new EventEmitter();
 @Output() filterButton = new EventEmitter();
