@@ -1,8 +1,8 @@
 
-<nav class="navbar navbar-light bg-success navbar-expand-lg">
+<nav class="navbar navbar-dark bg-dark navbar-expand-lg">
     <a class="navbar-brand mt-1" href="#">
-        <i class="fa fa-newspaper-o fa-2x text-dark  d-inline-block align-top">
-    </i> Ng News</a>
+        <i class="fa fa-newspaper-o fa-2x text-light  d-inline-block align-top">
+    </i> FOREX NEWS</a>
     <button class="navbar-toggler" data-toggle="collapse" data-target="#navbaritem" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
 </button>
@@ -29,7 +29,7 @@
 
         <form class="form-group d-flex ml-auto mb-0" #form="ngForm" (submit)="onSubmit(form)">
             <input type="text" class="form-control mr-2 align-self-center" required placeholder="Search" name="searchText" [ngModel]="searchText" value="">
-            <button class="btn btn-outline-warning align-self-center" [disabled]="!form.valid" type="submit">Search</button>
+            <button class="btn btn-primary align-self-center" [disabled]="!form.valid" type="submit">Search</button>
         </form>
     </div>
 </nav>

@@ -11,6 +11,7 @@ import {NgxPaginationModule} from 'ngx-pagination';
 
 import { pipe } from 'rxjs';
 import { FooterComponent } from './footer/footer.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { FooterComponent } from './footer/footer.component';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    BrowserAnimationsModule
     
   ],
   providers: [NewsService],
