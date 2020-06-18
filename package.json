@@ -4,12 +4,12 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "node server.js",
+    "build": "node build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e",
-    "postinstall": "ng build --aot --prod"
+    "e2e": "ng e2e"
   },
+
   "private": true,
   "dependencies": {
     "@angular/animations": "~8.0.0",
@@ -50,9 +50,5 @@
     "ts-node": "~7.0.0",
     "tslint": "~5.15.0",
     "typescript": "~3.4.3"
-  },
-  "engines": {
-    "node": "~12.16.2",
-    "npm": "~6.14.4"
   }
 }
